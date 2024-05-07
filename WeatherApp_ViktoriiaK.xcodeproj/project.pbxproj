@@ -58,13 +58,21 @@
 			children = (
 				DB2AEBB72BEAF3EA00EA1778 /* AppDelegate.swift */,
 				DB2AEBB92BEAF3EA00EA1778 /* SceneDelegate.swift */,
-				DB2AEBBB2BEAF3EA00EA1778 /* WeaterViewController.swift */,
+				DBD42D502BEAF5530093EBFE /* WeatherViewController */,
 				DB2AEBBD2BEAF3EA00EA1778 /* Main.storyboard */,
 				DB2AEBC02BEAF3EB00EA1778 /* Assets.xcassets */,
 				DB2AEBC22BEAF3EB00EA1778 /* LaunchScreen.storyboard */,
 				DB2AEBC52BEAF3EB00EA1778 /* Info.plist */,
 			);
 			path = WeatherApp_ViktoriiaK;
+			sourceTree = "<group>";
+		};
+		DBD42D502BEAF5530093EBFE /* WeatherViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DB2AEBBB2BEAF3EA00EA1778 /* WeaterViewController.swift */,
+			);
+			path = WeatherViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
