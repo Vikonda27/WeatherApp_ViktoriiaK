@@ -8,32 +8,30 @@
 import UIKit
 import SnapKit
 
-final class TitleView: UIView {
+final class DayTempLimitsView: UIView {
     struct InputModel {
-        let title: String
-        let subtitle: String?
-        let currentTemp: Int
-        let description: String
-        let minTemp: Int
-        let maxTemp: Int
+        let minWeekTemp: Double
+        let maxWeekTemp: Double
+        let minDayTemp: Double
+        let maxDayTemp: Double
+        let currentTemt: Double?
     }
     
-    private let stackView = UIStackView()
-    private let titleLabel = UILabel()
-    private let subtitleLabel = UILabel()
-    private let tempLabel = UILabel()
-    private let descriptionLable = UILabel()
-    private let tempLimitsLabel = UILabel()
+    private let tempLimitsView = UIView()
+    private let currentTempView = UIView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        setupStackView()
-        setupTitleLabel()
-        setupSubitleLabel()
-        setupTempLabel()
-        setupDescriptionLable()
-        setupTempLimitsLabel()
+        backgroundColor = UIColor(named: "darkBlue")?.withAlphaComponent(0.5)
+        layer.cornerRadius = 3
+        
+        snp.makeConstraints { make in
+            make.height.equalTo(6)
+        }
+        
+        setupTempLimitsView()
+        setupCurrentTempView()
     }
     
     required init?(coder: NSCoder) {
@@ -41,58 +39,58 @@ final class TitleView: UIView {
     }
     
     func setup(_ model: InputModel) {
-        titleLabel.text = model.title
-        subtitleLabel.text = model.subtitle
-        subtitleLabel.isHidden = model.subtitle == nil
-        tempLabel.text = "\(model.currentTemp)º"
-        descriptionLable.text = model.description
-        tempLimitsLabel.text = "Max: \(model.maxTemp)º, min: \(model.minTemp)º"
-    }
-    
-    private func setupStackView() {
-        addSubview(stackView)
-        stackView.axis = .vertical
-        stackView.spacing = 4
-        stackView.distribution = .fillProportionally
+        let weekTempDiff = model.maxWeekTemp - model.minWeekTemp
+        let minOffset = abs(model.minWeekTemp - model.minDayTemp) / weekTempDiff
+        let maxOffset = abs(model.maxWeekTemp - model.maxDayTemp) / weekTempDiff
+
+        tempLimitsView.snp.remakeConstraints { make in
+            make.trailing.equalToSuperview().multipliedBy(1 - maxOffset)
+            make.width.equalToSuperview().multipliedBy(1 - minOffset - maxOffset)
+            make.height.equalToSuperview()
+        }
         
-        stackView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+        if let currentTemt = model.currentTemt {
+            let currentTempOffset = abs(model.minWeekTemp - currentTemt) / weekTempDiff
+
+            if currentTempOffset == 0 {
+                currentTempView.snp.remakeConstraints { make in
+                    make.centerX.equalTo(snp.leading)
+                    make.size.equalTo(snp.height)
+                }
+            } else {
+                currentTempView.snp.remakeConstraints { make in
+                    make.centerX.equalTo(snp.trailing).multipliedBy(currentTempOffset)
+                    make.size.equalTo(snp.height)
+                }
+            }
         }
     }
     
-    private func setupTitleLabel() {
-        stackView.addArrangedSubview(titleLabel)
-        titleLabel.font = UIFont.systemFont(ofSize: 32, weight: .semibold)
-        titleLabel.textAlignment = .center
-        titleLabel.textColor = .white
+    private func setupTempLimitsView() {
+        addSubview(tempLimitsView)
+
+        tempLimitsView.backgroundColor = UIColor(named: "darkYellow")
+        tempLimitsView.layer.borderColor = UIColor(named: "darkBlue")?.withAlphaComponent(0.7).cgColor
+        tempLimitsView.layer.borderWidth = 1
+        tempLimitsView.layer.cornerRadius = 3
+
+        tempLimitsView.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview()
+            make.height.equalToSuperview()
+        }
     }
     
-    private func setupSubitleLabel() {
-        stackView.addArrangedSubview(subtitleLabel)
-        subtitleLabel.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
-        subtitleLabel.textAlignment = .center
-        subtitleLabel.textColor = .white
-    }
-    
-    private func setupTempLabel() {
-        stackView.addArrangedSubview(tempLabel)
-        tempLabel.font = UIFont.systemFont(ofSize: 92, weight: .thin)
-        tempLabel.textAlignment = .center
-        tempLabel.textColor = .white
-    }
-    
-    private func setupDescriptionLable() {
-        stackView.addArrangedSubview(descriptionLable)
-        descriptionLable.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
-        descriptionLable.textAlignment = .center
-        descriptionLable.textColor = .white
-        descriptionLable.numberOfLines = 2
-    }
-    
-    private func setupTempLimitsLabel() {
-        stackView.addArrangedSubview(tempLimitsLabel)
-        tempLimitsLabel.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
-        tempLimitsLabel.textAlignment = .center
-        tempLimitsLabel.textColor = .white
+    private func setupCurrentTempView() {
+        addSubview(currentTempView)
+
+        currentTempView.backgroundColor = .white
+        currentTempView.layer.borderColor = UIColor(named: "darkBlue")?.withAlphaComponent(0.7).cgColor
+        currentTempView.layer.borderWidth = 1
+        currentTempView.layer.cornerRadius = 3
+
+        currentTempView.snp.makeConstraints { make in
+            make.leading.equalToSuperview()
+            make.size.equalTo(snp.height)
+        }
     }
 }
