@@ -8,7 +8,6 @@
 import UIKit
 import SnapKit
 
-
 final class WeatherViewController: UIViewController {
     
     private let backgroundImage = UIImageView()
@@ -24,6 +23,15 @@ final class WeatherViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .white
+        
+        setupBackgroundImage()
+        setupTitleContainer()
+        setupTitleView()
+        setupBottomBarView()
+
+        setupTemporaryContentView()
+        setupDayTempView()
+        setupDayWeaterView()
     }
 
 

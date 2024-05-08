@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08553BDDBE20537EA0EB29F8 /* Pods_WeatherApp_ViktoriiaK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0EDBCC82B086A8E83406F1C /* Pods_WeatherApp_ViktoriiaK.framework */; };
 		DB2AEBB82BEAF3EA00EA1778 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2AEBB72BEAF3EA00EA1778 /* AppDelegate.swift */; };
 		DB2AEBBA2BEAF3EA00EA1778 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2AEBB92BEAF3EA00EA1778 /* SceneDelegate.swift */; };
 		DB2AEBBC2BEAF3EA00EA1778 /* WeaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2AEBBB2BEAF3EA00EA1778 /* WeaterViewController.swift */; };
 		DB2AEBBF2BEAF3EA00EA1778 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DB2AEBBE2BEAF3EA00EA1778 /* Base */; };
 		DB2AEBC12BEAF3EB00EA1778 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB2AEBC02BEAF3EB00EA1778 /* Assets.xcassets */; };
 		DB2AEBC42BEAF3EB00EA1778 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DB2AEBC32BEAF3EB00EA1778 /* Base */; };
+		DBD42D552BEAF6CA0093EBFE /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD42D542BEAF6CA0093EBFE /* TitleView.swift */; };
+		DBD42D572BEAF6E70093EBFE /* BottomBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD42D562BEAF6E70093EBFE /* BottomBarView.swift */; };
+		DBD42D592BEAF7010093EBFE /* DayTempLimitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD42D582BEAF7010093EBFE /* DayTempLimitsView.swift */; };
+		DBD42D5B2BEAF71E0093EBFE /* HourlyWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD42D5A2BEAF71E0093EBFE /* HourlyWeatherView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3BB8DDAEA5C69705830B27AF /* Pods-WeatherApp_ViktoriiaK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp_ViktoriiaK.debug.xcconfig"; path = "Target Support Files/Pods-WeatherApp_ViktoriiaK/Pods-WeatherApp_ViktoriiaK.debug.xcconfig"; sourceTree = "<group>"; };
 		DB2AEBB42BEAF3EA00EA1778 /* WeatherApp_ViktoriiaK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp_ViktoriiaK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB2AEBB72BEAF3EA00EA1778 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB2AEBB92BEAF3EA00EA1778 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +30,12 @@
 		DB2AEBC02BEAF3EB00EA1778 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB2AEBC32BEAF3EB00EA1778 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB2AEBC52BEAF3EB00EA1778 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBD42D542BEAF6CA0093EBFE /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		DBD42D562BEAF6E70093EBFE /* BottomBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarView.swift; sourceTree = "<group>"; };
+		DBD42D582BEAF7010093EBFE /* DayTempLimitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTempLimitsView.swift; sourceTree = "<group>"; };
+		DBD42D5A2BEAF71E0093EBFE /* HourlyWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyWeatherView.swift; sourceTree = "<group>"; };
+		E0EDBCC82B086A8E83406F1C /* Pods_WeatherApp_ViktoriiaK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherApp_ViktoriiaK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB4057A3ADF3805AFD988430 /* Pods-WeatherApp_ViktoriiaK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp_ViktoriiaK.release.xcconfig"; path = "Target Support Files/Pods-WeatherApp_ViktoriiaK/Pods-WeatherApp_ViktoriiaK.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08553BDDBE20537EA0EB29F8 /* Pods_WeatherApp_ViktoriiaK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +55,8 @@
 			children = (
 				DB2AEBB62BEAF3EA00EA1778 /* WeatherApp_ViktoriiaK */,
 				DB2AEBB52BEAF3EA00EA1778 /* Products */,
+				E81576E553723BBDB32939EF /* Pods */,
+				E348E907C7B8CE820EDE5CC6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +74,7 @@
 				DB2AEBB72BEAF3EA00EA1778 /* AppDelegate.swift */,
 				DB2AEBB92BEAF3EA00EA1778 /* SceneDelegate.swift */,
 				DBD42D502BEAF5530093EBFE /* WeatherViewController */,
+				DB2AEBBB2BEAF3EA00EA1778 /* WeaterViewController.swift */,
 				DB2AEBBD2BEAF3EA00EA1778 /* Main.storyboard */,
 				DB2AEBC02BEAF3EB00EA1778 /* Assets.xcassets */,
 				DB2AEBC22BEAF3EB00EA1778 /* LaunchScreen.storyboard */,
@@ -70,9 +86,38 @@
 		DBD42D502BEAF5530093EBFE /* WeatherViewController */ = {
 			isa = PBXGroup;
 			children = (
-				DB2AEBBB2BEAF3EA00EA1778 /* WeaterViewController.swift */,
+				DBD42D512BEAF5C50093EBFE /* Views */,
 			);
 			path = WeatherViewController;
+			sourceTree = "<group>";
+		};
+		DBD42D512BEAF5C50093EBFE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DBD42D542BEAF6CA0093EBFE /* TitleView.swift */,
+				DBD42D562BEAF6E70093EBFE /* BottomBarView.swift */,
+				DBD42D582BEAF7010093EBFE /* DayTempLimitsView.swift */,
+				DBD42D5A2BEAF71E0093EBFE /* HourlyWeatherView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E348E907C7B8CE820EDE5CC6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E0EDBCC82B086A8E83406F1C /* Pods_WeatherApp_ViktoriiaK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E81576E553723BBDB32939EF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3BB8DDAEA5C69705830B27AF /* Pods-WeatherApp_ViktoriiaK.debug.xcconfig */,
+				FB4057A3ADF3805AFD988430 /* Pods-WeatherApp_ViktoriiaK.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,9 +127,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DB2AEBC82BEAF3EB00EA1778 /* Build configuration list for PBXNativeTarget "WeatherApp_ViktoriiaK" */;
 			buildPhases = (
+				D0C5D525AECC6667B5FFA61F /* [CP] Check Pods Manifest.lock */,
 				DB2AEBB02BEAF3EA00EA1778 /* Sources */,
 				DB2AEBB12BEAF3EA00EA1778 /* Frameworks */,
 				DB2AEBB22BEAF3EA00EA1778 /* Resources */,
+				A9BE61B37E8DE493323E973B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,6 +188,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A9BE61B37E8DE493323E973B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WeatherApp_ViktoriiaK/Pods-WeatherApp_ViktoriiaK-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WeatherApp_ViktoriiaK/Pods-WeatherApp_ViktoriiaK-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WeatherApp_ViktoriiaK/Pods-WeatherApp_ViktoriiaK-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0C5D525AECC6667B5FFA61F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WeatherApp_ViktoriiaK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DB2AEBB02BEAF3EA00EA1778 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -149,6 +238,10 @@
 				DB2AEBBC2BEAF3EA00EA1778 /* WeaterViewController.swift in Sources */,
 				DB2AEBB82BEAF3EA00EA1778 /* AppDelegate.swift in Sources */,
 				DB2AEBBA2BEAF3EA00EA1778 /* SceneDelegate.swift in Sources */,
+				DBD42D592BEAF7010093EBFE /* DayTempLimitsView.swift in Sources */,
+				DBD42D572BEAF6E70093EBFE /* BottomBarView.swift in Sources */,
+				DBD42D552BEAF6CA0093EBFE /* TitleView.swift in Sources */,
+				DBD42D5B2BEAF71E0093EBFE /* HourlyWeatherView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +388,7 @@
 		};
 		DB2AEBC92BEAF3EB00EA1778 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BB8DDAEA5C69705830B27AF /* Pods-WeatherApp_ViktoriiaK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -323,6 +417,7 @@
 		};
 		DB2AEBCA2BEAF3EB00EA1778 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB4057A3ADF3805AFD988430 /* Pods-WeatherApp_ViktoriiaK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
