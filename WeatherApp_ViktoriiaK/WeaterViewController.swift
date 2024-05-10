@@ -6,12 +6,32 @@
 //
 
 import UIKit
+import SnapKit
 
-class ViewController: UIViewController {
+final class WeatherViewController: UIViewController {
+    
+    private let backgroundImage = UIImageView()
+    private let titleContainer = UIView()
+    private let titleView = TitleView()
+    private let bottomBarView = BottomBarView()
+
+    private let temporaryContentView = UIView()
+    private let dayTempLimitsView = DayTempLimitsView()
+    private let hourlyWeaterView = HourlyWeatherView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        view.backgroundColor = .white
+        
+        setupBackgroundImage()
+        setupTitleContainer()
+        setupTitleView()
+        setupBottomBarView()
+
+        setupTemporaryContentView()
+        setupDayTempView()
+        setupDayWeaterView()
     }
 
 
