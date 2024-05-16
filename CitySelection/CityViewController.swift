@@ -14,7 +14,7 @@ final class CityViewController: MainViewController {
 
     private let showHideUnitSelectionButton = UIButton()
     private let unitSelectionView = UnitSelectionView()
-    private let showWebViewButton = UIButton()
+    private let showWebInfoButton = UIButton()
 
     override func setup() {
         super.setup()
@@ -25,8 +25,8 @@ final class CityViewController: MainViewController {
         setupCityView()
 
         setupShowHideUnitSelectionButton()
-        setupUnitSelectionView()
-        setupShowWebViewButton()
+        
+        setupShowWebInfoButton()
     }
 
     private func setupSearchField() {
@@ -102,7 +102,7 @@ final class CityViewController: MainViewController {
     private func setupUnitSelectionView() {
         view.addSubview(unitSelectionView)
 
-        unitSelectionView.backgroundColor = .white.withAlphaComponent(0.5)
+        unitSelectionView.backgroundColor = .white.withAlphaComponent(0.8)
         unitSelectionView.isHidden = true
 
         unitSelectionView.snp.makeConstraints { make in
@@ -111,25 +111,25 @@ final class CityViewController: MainViewController {
         }
     }
 
-    private func setupShowWebViewButton() {
-        view.addSubview(showWebViewButton)
+    private func setupShowWebInfoButton() {
+        view.addSubview(showWebInfoButton)
 
-        showWebViewButton.setTitle("Show Info", for: .normal)
-        showWebViewButton.setTitleColor(.black, for: .normal)
-        showWebViewButton.backgroundColor = .white.withAlphaComponent(0.6)
-        showWebViewButton.layer.cornerRadius = 8
+        showWebInfoButton.setTitle("Show Info", for: .normal)
+        showWebInfoButton.setTitleColor(.black, for: .normal)
+        showWebInfoButton.backgroundColor = .white.withAlphaComponent(0.6)
+        showWebInfoButton.layer.cornerRadius = 8
 
-        showWebViewButton.addAction(UIAction { [weak self] _ in
+        showWebInfoButton.addAction(UIAction { [weak self] _ in
             guard let self else { return }
 
-            let webViewController = WebViewController()
+            let webViewController = WebInfoController()
             if let url = URL(string: "https://meteoinfo.ru/t-scale") {
                 webViewController.open(url)
             }
             present(webViewController, animated: true)
         }, for: .touchUpInside)
 
-        showWebViewButton.snp.makeConstraints { make in
+        showWebInfoButton.snp.makeConstraints { make in
             make.top.equalTo(showHideUnitSelectionButton.snp.bottom).offset(16)
             make.horizontalEdges.equalToSuperview().inset(16)
             make.height.equalTo(40)
