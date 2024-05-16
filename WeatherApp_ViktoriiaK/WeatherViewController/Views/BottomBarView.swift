@@ -13,6 +13,8 @@ final class BottomBarView: UIView {
     private let deviderView = UIView()
     private let cityListButton = UIButton()
     
+    var cityListButtonAction: (() -> Void)?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
