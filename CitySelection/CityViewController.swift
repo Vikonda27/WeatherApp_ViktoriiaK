@@ -123,7 +123,7 @@ final class CityViewController: MainViewController {
             guard let self else { return }
 
             let webViewController = WebInfoController()
-            if let url = URL(string: "https://meteoinfo.ru/t-scale") {
+            if let url = URL(string: "https://www.weather.gov") {
                 webViewController.open(url)
             }
             present(webViewController, animated: true)
