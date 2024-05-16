@@ -24,15 +24,7 @@ extension UnitSelectionView {
     }
 }
 
-final class UnitSelectionView: MainView, UIPickerViewDataSource, UIPickerViewDelegate {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        TempUnit.allCases.count
-    }
-    
+final class UnitSelectionView: MainView {
     private let pickerView = UIPickerView()
 
     private var currentUnit = TempUnit.celsius
@@ -56,3 +48,23 @@ final class UnitSelectionView: MainView, UIPickerViewDataSource, UIPickerViewDel
     }
 }
 
+extension UnitSelectionView: UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        TempUnit.allCases.count
+    }
+
+}
+
+extension UnitSelectionView: UIPickerViewDelegate {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        TempUnit.allCases[row].unitLabel
+    }
+
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        currentUnit = TempUnit.allCases[row]
+    }
+}
