@@ -83,7 +83,7 @@ final class WeatherViewController: UIViewController {
     private func setupTemporaryContentView() {
         view.addSubview(temporaryContentView)
         bottomBarView.cityListButtonAction = { [weak self] in
-            self?.present(CitySelectionViewController(), animated: true)
+            self?.present(CityViewController(), animated: true)
         }
 
         temporaryContentView.backgroundColor = UIColor(named: "lightBlue")
