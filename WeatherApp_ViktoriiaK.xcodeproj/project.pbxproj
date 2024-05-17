@@ -18,6 +18,12 @@
 		DBD42D572BEAF6E70093EBFE /* BottomBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD42D562BEAF6E70093EBFE /* BottomBarView.swift */; };
 		DBD42D592BEAF7010093EBFE /* DayTempLimitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD42D582BEAF7010093EBFE /* DayTempLimitsView.swift */; };
 		DBD42D5B2BEAF71E0093EBFE /* HourlyWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD42D5A2BEAF71E0093EBFE /* HourlyWeatherView.swift */; };
+		DBD7FB112BF5983B005D2FF4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FB102BF5983B005D2FF4 /* MainView.swift */; };
+		DBD7FB132BF59850005D2FF4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FB122BF59850005D2FF4 /* MainViewController.swift */; };
+		DBD7FB162BF59956005D2FF4 /* CityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FB152BF59956005D2FF4 /* CityView.swift */; };
+		DBD7FB182BF59964005D2FF4 /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FB172BF59964005D2FF4 /* CityViewController.swift */; };
+		DBD7FB1A2BF59B97005D2FF4 /* WebInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FB192BF59B97005D2FF4 /* WebInfoController.swift */; };
+		DBD7FB1C2BF65807005D2FF4 /* UnitSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FB1B2BF65807005D2FF4 /* UnitSelectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +40,12 @@
 		DBD42D562BEAF6E70093EBFE /* BottomBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarView.swift; sourceTree = "<group>"; };
 		DBD42D582BEAF7010093EBFE /* DayTempLimitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTempLimitsView.swift; sourceTree = "<group>"; };
 		DBD42D5A2BEAF71E0093EBFE /* HourlyWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyWeatherView.swift; sourceTree = "<group>"; };
+		DBD7FB102BF5983B005D2FF4 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		DBD7FB122BF59850005D2FF4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		DBD7FB152BF59956005D2FF4 /* CityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityView.swift; sourceTree = "<group>"; };
+		DBD7FB172BF59964005D2FF4 /* CityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
+		DBD7FB192BF59B97005D2FF4 /* WebInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebInfoController.swift; sourceTree = "<group>"; };
+		DBD7FB1B2BF65807005D2FF4 /* UnitSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitSelectionView.swift; sourceTree = "<group>"; };
 		E0EDBCC82B086A8E83406F1C /* Pods_WeatherApp_ViktoriiaK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherApp_ViktoriiaK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB4057A3ADF3805AFD988430 /* Pods-WeatherApp_ViktoriiaK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp_ViktoriiaK.release.xcconfig"; path = "Target Support Files/Pods-WeatherApp_ViktoriiaK/Pods-WeatherApp_ViktoriiaK.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,6 +65,9 @@
 		DB2AEBAB2BEAF3EA00EA1778 = {
 			isa = PBXGroup;
 			children = (
+				DBD7FB192BF59B97005D2FF4 /* WebInfoController.swift */,
+				DBD7FB142BF59936005D2FF4 /* CitySelection */,
+				DBD7FB0F2BF5980F005D2FF4 /* MainViews */,
 				DB2AEBB62BEAF3EA00EA1778 /* WeatherApp_ViktoriiaK */,
 				DB2AEBB52BEAF3EA00EA1778 /* Products */,
 				E81576E553723BBDB32939EF /* Pods */,
@@ -102,6 +117,25 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		DBD7FB0F2BF5980F005D2FF4 /* MainViews */ = {
+			isa = PBXGroup;
+			children = (
+				DBD7FB102BF5983B005D2FF4 /* MainView.swift */,
+				DBD7FB122BF59850005D2FF4 /* MainViewController.swift */,
+			);
+			path = MainViews;
+			sourceTree = "<group>";
+		};
+		DBD7FB142BF59936005D2FF4 /* CitySelection */ = {
+			isa = PBXGroup;
+			children = (
+				DBD7FB152BF59956005D2FF4 /* CityView.swift */,
+				DBD7FB172BF59964005D2FF4 /* CityViewController.swift */,
+				DBD7FB1B2BF65807005D2FF4 /* UnitSelectionView.swift */,
+			);
+			path = CitySelection;
+			sourceTree = "<group>";
+		};
 		E348E907C7B8CE820EDE5CC6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,7 +150,6 @@
 				3BB8DDAEA5C69705830B27AF /* Pods-WeatherApp_ViktoriiaK.debug.xcconfig */,
 				FB4057A3ADF3805AFD988430 /* Pods-WeatherApp_ViktoriiaK.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -236,10 +269,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB2AEBBC2BEAF3EA00EA1778 /* WeaterViewController.swift in Sources */,
+				DBD7FB162BF59956005D2FF4 /* CityView.swift in Sources */,
+				DBD7FB1C2BF65807005D2FF4 /* UnitSelectionView.swift in Sources */,
+				DBD7FB112BF5983B005D2FF4 /* MainView.swift in Sources */,
 				DB2AEBB82BEAF3EA00EA1778 /* AppDelegate.swift in Sources */,
+				DBD7FB1A2BF59B97005D2FF4 /* WebInfoController.swift in Sources */,
+				DBD7FB182BF59964005D2FF4 /* CityViewController.swift in Sources */,
 				DB2AEBBA2BEAF3EA00EA1778 /* SceneDelegate.swift in Sources */,
 				DBD42D592BEAF7010093EBFE /* DayTempLimitsView.swift in Sources */,
 				DBD42D572BEAF6E70093EBFE /* BottomBarView.swift in Sources */,
+				DBD7FB132BF59850005D2FF4 /* MainViewController.swift in Sources */,
 				DBD42D552BEAF6CA0093EBFE /* TitleView.swift in Sources */,
 				DBD42D5B2BEAF71E0093EBFE /* HourlyWeatherView.swift in Sources */,
 			);
@@ -395,6 +434,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SC9ST93RPM;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WeatherApp_ViktoriiaK/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -424,6 +464,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SC9ST93RPM;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WeatherApp_ViktoriiaK/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
